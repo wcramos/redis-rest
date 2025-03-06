@@ -9,5 +9,14 @@ export API_USER="your_username"
 export API_PASSWORD="your_password"
 
 After setup the API you can run:
-python exercise2.py
+
+Usage: python script.py <CDB | CUSR | LUSR | DDB <db_id>>
+
+CDB = Create a New Database (my-redis-db)
+CUSR = Create Three New Users with default password "my-password"
+LUSR = List and Display Users
+DDB <UID> = Delete the Created Database (need to enter the database UID)
+
+
+
 
