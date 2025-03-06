@@ -25,7 +25,7 @@ def send_http_request(method, endpoint, payload=None):
         "Content-Type": "application/json"
     }
     
-    response = requests.request(method, url, headers=headers, json=payload)
+    response = requests.request(method, url, headers=headers, json=payload, verify=False)
     
     if response.status_code >= 400:
         raise Exception(f"HTTP {response.status_code}: {response.text}")
