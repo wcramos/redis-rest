@@ -67,7 +67,7 @@ def list_users():
 
 def delete_database(db_id):
     print(f"\nDeleting database with UID: {db_id}")
-    send_http_request("DELETE", f"/dbds/{db_id}")
+    send_http_request("DELETE", f"/bdbs/{db_id}")
     print("Database deleted successfully!")
 
 def main():
