@@ -40,9 +40,9 @@ def create_database():
         "memory_size": 100  # 100MB
     }
     
-    response = send_http_request("POST", "/v1/bdbs", request_json)
-    print(f"Database created with ID: {response['id']}")
-    return response["id"]
+    response = send_http_request("POST", "/bdbs", request_json)
+    print(f"Database created with UID: {response['uid']}")
+    return response["uid"]
 
 def create_users():
     print("Creating users...")
@@ -66,8 +66,8 @@ def list_users():
         print(f"- Name: {user['name']} | Role: {user['role']} | Email: {user['email']}")
 
 def delete_database(db_id):
-    print(f"\nDeleting database with ID: {db_id}")
-    send_http_request("DELETE", f"/v1/dbds/{db_id}")
+    print(f"\nDeleting database with UID: {db_id}")
+    send_http_request("DELETE", f"/dbds/{db_id}")
     print("Database deleted successfully!")
 
 def main():
