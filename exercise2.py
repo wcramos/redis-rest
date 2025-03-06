@@ -47,9 +47,9 @@ def create_database():
 def create_users():
     print("Creating users...")
     users = [
-        {"email": "john.doe@example.com", "name": "John Doe", "role": "db_viewer"},
-        {"email": "mike.smith@example.com", "name": "Mike Smith", "role": "db_member"},
-        {"email": "cary.johnson@example.com", "name": "Cary Johnson", "role": "admin"}
+        {"email": "john.doe@example.com", "name": "John Doe", "role": "db_viewer", "password": "my-password"},
+        {"email": "mike.smith@example.com", "name": "Mike Smith", "role": "db_member", "password": "my-password"},
+        {"email": "cary.johnson@example.com", "name": "Cary Johnson", "role": "admin", "password": "my-password",}
     ]
     
     for user in users:
