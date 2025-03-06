@@ -2,12 +2,15 @@ import os
 import base64
 import json
 import requests
+import urllib3
 import sys
 
 # Environment variables
 BASE_URL = os.getenv("API_URL")
 USERNAME = os.getenv("API_USER")
 PASSWORD = os.getenv("API_PASSWORD")
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 def check_env_variables():
     if not all([BASE_URL, USERNAME, PASSWORD]):
