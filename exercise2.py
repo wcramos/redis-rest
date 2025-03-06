@@ -37,11 +37,10 @@ def create_database():
     
     request_json = {
         "name": "my_redis_db",
-        "memory_size": 100,  # 100MB
-        "modules": []  # Empty modules
+        "memory_size": 100  # 100MB
     }
     
-    response = send_http_request("POST", "/databases", request_json)
+    response = send_http_request("POST", "/v1/bdbs", request_json)
     print(f"Database created with ID: {response['id']}")
     return response["id"]
 
@@ -68,7 +67,7 @@ def list_users():
 
 def delete_database(db_id):
     print(f"\nDeleting database with ID: {db_id}")
-    send_http_request("DELETE", f"/databases/{db_id}")
+    send_http_request("DELETE", f"/v1/dbds/{db_id}")
     print("Database deleted successfully!")
 
 def main():
