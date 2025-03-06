@@ -36,7 +36,7 @@ def create_database():
     print("Creating a new database...")
     
     request_json = {
-        "name": "my_redis_db",
+        "name": "my-redis-db",
         "memory_size": 100  # 100MB
     }
     
